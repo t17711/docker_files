@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  spark:
+    image: bintm/spark_anaconda_installed
+    volumes:
+      - .:/code
+    ports:
+      - "8888:8888"
+    tty: true

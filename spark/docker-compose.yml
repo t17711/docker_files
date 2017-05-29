@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+   spark:
+     image: spark_anaconda:latest
+     ports:
+       - "8888:8888"
+       - "1234:80"

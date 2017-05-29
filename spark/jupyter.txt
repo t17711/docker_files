@@ -1,0 +1,22 @@
+# on your folder
+docker run -it -d -p 8888:8888 -p 4040:4040  --name spark -v .:/spark/workspace spark_anaconda
+
+docker exec -it spark bash
+
+// first time 
+
+	/opt/anaconda/bin/jupyter notebook --generate-config
+
+	// uncomment c.NotebookApp.ip = '*' 
+	// or cat it
+
+	echo "c.NotebookApp.ip = '*'">>/root/.jupyter/jupyter_notebook_config.py
+
+// regularly
+
+rm -r -f /spark/metastored_b 
+// if error
+
+
+PYSPARK_PYTHON='python2.7' PYSPARK_DRIVER_PYTHON='/opt/anaconda/bin/jupyter' PYSPARK_DRIVER_PYTHON_OPTS='notebook' /spark/bin/pyspark
+

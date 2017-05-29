@@ -1,0 +1,2 @@
+Download Anaconda2-4.3.1-Linux-x86_64.sh to anaconda folder
+docker build -t name t . 
